@@ -5,11 +5,11 @@
        
         <script type="text/javascript">
             
-function Triangle(height , width , hypotenuse)
+function Triangle(height , width)
             {
                 this.length = length;
                 this.width = width;
-                this.hypotenuse = hypotenuse;
+             
                 
 function getPerimeter(length , width)
 {
@@ -21,7 +21,7 @@ function getArea(length ,width)
 return var area=1/2(length * width);
 }
 function toString(){
-                    return "The Triangle with sides = " + this.length + this.width + this.hypotenuse + " has Area = " + this.getArea() + " and Perimeter = " + this.getPerimeter();
+                    return "The Triangle with sides = " + this.length + this.width + " has Area = " + this.getArea() + " and Perimeter = " + this.getPerimeter();
 }
    }        
            
@@ -29,7 +29,7 @@ function getAll(){
 
     var width = parseFloat(document.getElementById('width').value);
     var length =parseFloat(document.getElementById('length').value);
-    var hypotenuse=parseFloat(document.getElementById('hypotenuse').value);
+   
     
 
             
