@@ -1,6 +1,6 @@
 var sum = 0;
    //we iterate through the loop inputing the condition of i<1000
- for(int i = 0; i < 1000; i++){ 
+ for(var i = 0; i < 1000; i++){ 
   // % is used for finding out the multiples of 3 and 5
 if(i%3 === 0 || i%5 === 0)   
 {
