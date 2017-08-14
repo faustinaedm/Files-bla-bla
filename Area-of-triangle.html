@@ -5,15 +5,16 @@
 
 <head>
     <script  style="text/javascript">
-        function hypotenuse(){
+        function getHypotenuse(){
              var base = document.hypotenuse.width.value;
              var length = document.hypotenuse.length.value;
-var hypotenuse = Math.sqrt((base * base) +( length * length));
+var hypotenuse = Math.sqrt(Math.pow(base,2) + Math.pow(length,2));
+             document.getElementById('multiply').value = hypotenuse;
          }
         
         function getPerimeter()
 {
-    var hypotenuse = document.perim.hypotenuse.value;
+    var hypotenuse = document.width.hypotenuse.value;
      var base = document.perim.width.value;
              var length = document.perim.length.value;
 var perimTriangle = parseInt(hypotenuse) + parseInt(base) + parseInt(length);
@@ -21,7 +22,6 @@ var perimTriangle = parseInt(hypotenuse) + parseInt(base) + parseInt(length);
 }
           function calculateArea()
           {
-
              var base = document.myform.width.value;
              var length = document.myform.length.value;
              var area = parseFloat(base) * parseFloat(length) * (1/2);
@@ -31,6 +31,13 @@ var perimTriangle = parseInt(hypotenuse) + parseInt(base) + parseInt(length);
       </HEAD>
 
       <BODY>
+          <form name= "hypotenuse">
+             BASE  <INPUT TYPE="text" NAME="width" VALUE=""/> +
+         LENGTH <INPUT TYPE="text" NAME="length" VALUE=""/>
+           <INPUT TYPE="button" NAME="button" Value="=" onClick="getHypotenuse()"/>
+                      <INPUT TYPE="text" ID="multiply" NAME="result" VALUE=""/>
+          </form>
+          
           <form name= "perim">
              BASE  <INPUT TYPE="text" NAME="width" VALUE=""/> +
          LENGTH <INPUT TYPE="text" NAME="length" VALUE=""/>+
@@ -41,7 +48,7 @@ var perimTriangle = parseInt(hypotenuse) + parseInt(base) + parseInt(length);
           
           </form>
         <FORM NAME= "myform">
-          BASAE<INPUT TYPE="text" NAME="width" VALUE=""/> * 
+          BASE<INPUT TYPE="text" NAME="width" VALUE=""/> * 
          LENGTH <INPUT TYPE="text" NAME="length" VALUE=""/> * 1/2
           <INPUT TYPE="button" NAME="button" Value="=" onClick="calculateArea()"/>
           <INPUT TYPE="text" ID="add" NAME="result" VALUE=""/>
