@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+ <meta charset="UTF-8">
+
+<html>
+
+<head>
+    <script  style="text/javascript">
+        function Triangle(base,length)
+        {
+            this.base=base;
+            this.length=length;
+     
+        function getHypotenuse(base,length){
+           
+var hypotenuse = Math.sqrt(Math.pow(base,2) + Math.pow(length,2));
+          return hypotenuse;
+         }
+        
+        function getPerimeter(hypotenuse,base,length)
+{
+    getHypotenuse();
+var perimTriangle = parseInt(hypotenuse) + parseInt(base) + parseInt(length);
+    return perimTriangle;
+}
+          function calculateArea(base,length)
+          {
+            var area = parseFloat(base) * parseFloat(length) * (1/2);
+            return area;
+          }
+            this.toString = function(){
+                    return "The Triangle with sides = " + this.base + this.length + " has Area = " + this.calculateArea() + " Perimeter = " + this.getPerimeter();
+                }
+        function calculate(){
+         var res= parseFloat(document.getElementById('base').value);
+            var res2=parseFloat(document.getElementById('length').value);
+            var myTriangle= new Triangle(base,length);
+              document.getElementById('addAll').value = myTriangle.toString();
+        }
+               
+        </script>
+      </HEAD>
+
+      <BODY>
+          <form name= "hypotenuse">
+             BASE  <INPUT TYPE="text" NAME="base" VALUE=""/> +
+         LENGTH <INPUT TYPE="text" NAME="length" VALUE=""/>
+           <INPUT TYPE="button" NAME="button" Value="=" onClick="calculate()"/>
+                      <INPUT TYPE="text" ID="multiply" NAME="result" VALUE=""/>
+          </form>
+          
+        
+
+
+</body>
+
+</html>  
