@@ -5,10 +5,11 @@
 
 <head>
     <script  style="text/javascript">
-        function Triangle(base,length)
+        function Triangle(base,length,hypotenuse)
         {
             this.base=base;
             this.length=length;
+            this.hypotenuse=hypotenuse;
      
         function getHypotenuse(base,length){
            
@@ -28,22 +29,24 @@ var perimTriangle = parseInt(hypotenuse) + parseInt(base) + parseInt(length);
             return area;
           }
             this.toString = function(){
-                    return "The Triangle with sides = " + this.base + this.length + " has Area = " + this.calculateArea() + " Perimeter = " + this.getPerimeter();
+                    return "The Triangle with sides = " + this.base + this.length + this.hypotenuse+" has Area = " + this.calculateArea() + " Perimeter = " + this.getPerimeter();
                 }
         function calculate(){
          var res= parseFloat(document.getElementById('base').value);
             var res2=parseFloat(document.getElementById('length').value);
-            var myTriangle= new Triangle(base,length);
-              document.getElementById('addAll').value = myTriangle.toString();
+            var res3=parseFloat(document.getElementById('hypotenuse').value);
+            var myTriangle= new Triangle(base,length,hypotenuse);
+              document.getElementById('multiply').value = myTriangle.toString();
         }
                
         </script>
       </HEAD>
 
       <BODY>
-          <form name= "hypotenuse">
+          <form name= "hypo">
              BASE  <INPUT TYPE="text" NAME="base" VALUE=""/> +
-         LENGTH <INPUT TYPE="text" NAME="length" VALUE=""/>
+         LENGTH <INPUT TYPE="text" NAME="length" VALUE=""/>+
+             HYPOTENUSE <input type="text" name="hypotenuse" value=""/>
            <INPUT TYPE="button" NAME="button" Value="=" onClick="calculate()"/>
                       <INPUT TYPE="text" ID="multiply" NAME="result" VALUE=""/>
           </form>
